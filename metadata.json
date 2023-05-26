@@ -1,0 +1,8 @@
+{
+  "name": "Fake Battery Extension",
+  "description": "Displays a fake battery percentage",
+  "uuid": "fake-battery-extension@yourname",
+  "shell-version": ["3.38", "3.36", "3.34"],
+  "version": "1.0"
+}
+
