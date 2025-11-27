@@ -1,43 +1,61 @@
 # Fake Battery Extension
 
-The Fake Battery Extension is a GNOME Shell extension that displays a fake battery percentage in the top panel of Ubuntu.
+A lightweight GNOME Shell extension that displays a customizable fake battery percentage in the top panel.
 
-## Installation
+## Features
 
- Ensure you have the necessary dependencies:
-   - Node.js and npm (Node Package Manager)
-   - GNOME Shell development package: `sudo apt install gnome-shell-dev`
-
- Clone or download this repository to your local machine.
-
- Open a terminal and navigate to the extension's directory:
-
-
-cd fake-battery-extension
-
-
-Create the symbolic link to your extension's folder:
-
-ln -s $(pwd) ~/.local/share/gnome-shell/extensions/
-
-
-5. Restart the GNOME Shell by pressing Alt+F2, entering `r`, and pressing Enter.
-
-6. Open the GNOME Extensions application (you may need to install it if not already installed).
-
-7. Enable the "Fake Battery Extension" from the list of extensions.
-
-## Usage
-
-Once the extension is enabled, you will see a fake battery percentage displayed in the top panel of Ubuntu.
-
-By default, the extension displays "100%" as the battery percentage. To modify the displayed value, open the `extension.js` file in a text editor and modify the `textLabel` content within the `enable()` function.
-
-Please note that this extension does not affect the actual battery level but only displays a static value.
+- Displays a fake battery indicator in the GNOME top panel
+- Customizable battery percentage display
+- Minimal resource usage
+- Clean, bold styling with red indicator
 
 ## Compatibility
 
-This extension is compatible with GNOME Shell versions 3.38, 3.36, and 3.34.
+| GNOME Shell Version |
+|---------------------|
+| 3.38                |
+| 3.36                |
+| 3.34                |
+
+## Installation
+
+1. Clone or download this repository:
+   ```bash
+   git clone https://github.com/DEADSAW/Awesomebat.git
+   cd Awesomebat
+   ```
+
+2. Create a symbolic link to the GNOME extensions directory:
+   ```bash
+   ln -s $(pwd) ~/.local/share/gnome-shell/extensions/fake-battery-extension@yourname
+   ```
+   > **Note:** The extension UUID is `fake-battery-extension@yourname` as defined in `metadata.json`. You can customize this by updating the `uuid` field in `metadata.json` and using the same value in the commands above.
+
+3. Restart GNOME Shell:
+   - Press `Alt + F2`, type `r`, and press `Enter`
+   - Or log out and log back in
+
+4. Enable the extension using GNOME Extensions app or:
+   ```bash
+   gnome-extensions enable fake-battery-extension@yourname
+   ```
+
+## Configuration
+
+To modify the displayed battery percentage, edit the `extension.js` file:
+
+```javascript
+text: '100%'  // Change to your desired value
+```
+
+## File Structure
+
+```
+├── extension.js    # Main extension logic
+├── extension.css   # Styling for the battery label
+├── metadata.json   # Extension metadata
+└── README.md       # Documentation
+```
 
 ## License
 
