@@ -29,6 +29,7 @@ A lightweight GNOME Shell extension that displays a customizable fake battery pe
    ```bash
    ln -s $(pwd) ~/.local/share/gnome-shell/extensions/fake-battery-extension@yourname
    ```
+   > **Note:** The extension UUID is `fake-battery-extension@yourname` as defined in `metadata.json`. You can customize this by updating the `uuid` field in `metadata.json` and using the same value in the commands above.
 
 3. Restart GNOME Shell:
    - Press `Alt + F2`, type `r`, and press `Enter`
